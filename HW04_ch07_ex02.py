@@ -21,15 +21,28 @@
 
 ###############################################################################
 # Imports
+import math
 
+#Body
 
-# Body
+def eval_loop():
+    last_evaluation = "N/A"
+    while True:
+        try:
+            evaluation = (input("What would you like to evaluate? "))
+            if evaluation == ("done"):
+                return last_evaluation
+            last_evaluation = eval(evaluation)
+            print(last_evaluation)
 
+        except:
+            print("Sorry, I can only evaluate mathematical expressions")
+    
 
 ###############################################################################
 def main():
-    pass  # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
+
+    print(eval_loop())
 
 if __name__ == '__main__':
     main()

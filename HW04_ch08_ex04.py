@@ -14,8 +14,7 @@
 
 
 def any_lowercase1(s):
-    """Explain what is wrong, if anything, here.
-    """
+    """Nothing wrong"""
     for c in s:
         if c.islower():
             return True
@@ -24,8 +23,9 @@ def any_lowercase1(s):
 
 
 def any_lowercase2(s):
-    """Explain what is wrong, if anything, here.
-    """
+    """Quotations should not be present - True and False are registered as
+    strings rather than booleans; moreover, by using the quotation marks
+    around the letter c python evaluates c as a character rather than a function"""
     for c in s:
         if 'c'.islower():
             return 'True'
@@ -34,25 +34,22 @@ def any_lowercase2(s):
 
 
 def any_lowercase3(s):
-    """Explain what is wrong, if anything, here.
-    """
+    """True or false are assigned only based on the last letter of the word"""
     for c in s:
         flag = c.islower()
     return flag
 
 
 def any_lowercase4(s):
-    """Explain what is wrong, if anything, here.
-    """
+    """Nothing wrong"""
     flag = False
     for c in s:
         flag = flag or c.islower()
     return flag
 
-
 def any_lowercase5(s):
-    """Explain what is wrong, if anything, here.
-    """
+    """Once the script runs into an upper case letter it stops the loop
+    and returns False"""
     for c in s:
         if not c.islower():
             return False
@@ -62,12 +59,11 @@ def any_lowercase5(s):
 ###############################################################################
 def main():
 
-    # Remove print("Hello World!") and for each function above that is wrong,
-    # call that function with a string for which the function returns
-    # incorrectly.
-    # ex.: any_lowercase_("thisstringmessesupthefunction")
-    print("Hello World!")
+    print(any_lowercase2("HERE"))
 
+    print(any_lowercase3("herE"))
+
+    print(any_lowercase5("hERe"))
 
 if __name__ == '__main__':
     main()
